@@ -1,0 +1,157 @@
+#Notas de Clase  09 de febrero de 2018.
+
+MarkDown 
+Una vez instalado todo, en MarkDown se harán las notas de clase. Durante esta sesión el laboratorista nos enseñó como hacer el uso de este programa entre las cosas que aprendimos, está como poner títulos, subtitulos, hacer listas (enumeradas y no enumeradas), poner palabras en negritas y cursivas, escribir un link, ingresar imagenes, citar y referenciar. Esto con el proposito de poder tomar buenas notas de clases y poder guardar en el repositorio todo lo que desarrollaremos aquí. Abajo copio el texto que se encuentra en un documento de texto llamado template.md, otorgado por el labvoratorista en la carpeta H, en el cual nos dice como hacer lo que ya mencioné.
+
+*************************************************************************************
+
+# Título
+Este es un template para que puedan subir su trabajo hecho en clase.
+## Estructura básica de Markdown
+Los párrafos se hacen dejando una línea sin caracteres entre líneas de código (es decir, para empezar un párrafo en lugar de "dar un sólo ENTER" se deben "dar dos ENTER").
+
+Este es el segundo párrafo y así.
+
+ 
+### Negritas, cursivas y combinación de negritas y cursivas
+
+En los párrafos se puede incluir *texto en cursivas* poniendo las palabras entre asteriscos o bien entre guiones bajos como este otro _texto en cursivas_. 
+
+Para **texto en negritas** se ponen las palabras entre asteriscos dobles o bien entre guiones bajos dobles como __este otro texto en negritas__.
+
+Y, naturalmente, *cursivas y  **negritas** pueden combinarse* como pueden claramente ver.
+
+### Listas
+
+Para hacer listas enumeradas se pone número seguido de punto y un espacio: 
+
+1. Elemento 1 de la lista enumerada
+2. Elemento 2 de la lista enumerada
+    1. Elemento 2.1 de la lista
+    2. Elemento 2.2 de la lista
+        1. Elemento 2.2.1 de la lista
+        2. Elemento 2.1.2 de la lista
+3. Elemento 3 de la lista enumerada
+    1. Elemento 3.1 de la lista
+    2. Elemento 3.2 de la lista
+ 
+Para hacer listas sin enumerar:
+
+* Uno
+* Dos
+* Tres
+    - Sí
+    - No
+    - Quizá
+    - 5
+        - Sí que sí
+        - No que no
+    - ajam
+* Cuatro
+
+## Links
+Link hacia google [aquí](https://www.google.com), y [aquí adelante](https://www.google.com "Google's Homepage") también pero con un "título" . 
+
+Para que el link completo sea mostradoa se debe encerrar en signos de "menor que" y "mayor que" <http://www.github.com>.
+
+### Añadir imágenes
+Para que puedan poner imágenes que tengan en su carpeta:
+
+![alt text](img/acdc.png "Letrero cuando se ubica el cursor encima.")
+
+## Citas en bloque
+
+Como dijo alguna Jack el destripador
+> Vamos
+>
+> por
+>
+> partes.
+
+
+## Referencias para profundizar
+La referencia oficial para la sintaxis de Markdown es [Daring Fireball](https://daringfireball.net/projects/markdown/syntax).
+
+Si quieres volver a aprender lo básico de Markdown cono un tutorial práctico y muy didáctico puedes probar con [este](http://commonmark.org/help/tutorial/).
+
+****************************************************************************************************++****
+*
+*Emprezando a usar R
+*
+***********************************************************************************************************
+#Guardar documento (es necesario que en el directorio se cambie \ por /)
+getwd()
+setdw("C:\Users\PC\Documents\GitHub\Lab_Econ_I\Suarez_EM\R_drafts")
+getdw()
+#Uso de funciones matemàticas bàsicas
+abs(-495)
+log(588585)
+exp(1.4)
+#Creación de variables y ver tipo de variables con class (string, numérica, vooliana)
+a=52
+class(a)
+b=58985
+c=87484
+d=4884
+f="perrito"
+e=TRUE
+g=FALSE
+AporB=a*b
+A=c(5,4,6,4,3,2,2)
+Animalitos=c("Perro","Gato","Conejo")
+Vool=c(TRUE, FALSE,TRUE)
+#Uso de matrices
+Matriz=matrix(1,2,3)
+Matriz_2=matrix(1:9,byrow=TRUE,nrow=3)
+Matriz_2
+#Transpuesta de una matriz
+MT=t(Matriz)
+#Matriz identidad
+I_10=diag(10)
+I_10
+#Fila de una matriz
+MT[1,]
+#Columna de una matriz
+MT[,1]
+#Cambiar valor de una matriz
+MT[1]=55555
+#Inversa
+Inv=solve(I_10)
+
+*****************************************************************************************************************
+*
+*Ahora con la aprendido en clase se hará el ejercio cuatro de la tarea 1
+*
+*****************************************************************************************************************
+#Tarea1 ejercicio 4
+##Valor esperado
+EX1=0
+EX2=4
+EX3=1
+EY1=1
+EY2=4
+
+##Varianza
+VX1=1
+VX2=4
+VX3=2
+VY1=1
+VY2=9
+
+##Covarianza
+cX1X2=-1
+cX1X3=0
+cX1Y1=0
+cX1Y2=1  
+cX2X3=2
+cX2Y1=-1
+cX2Y2=-3
+cX3Y1=0
+cX3Y2=3
+cY1Y2=-2
+### dos maneras de que el valor esperado quede en la forma correcta
+EX=t(t(c(EX1,EX2,EX3)))
+#EX=matrix(c(EX1,EX2,EX3))
+EX
+VarX=matrix(c(VX1,CX1X2,CX1X3,CX1X2,VX2,CX2X3,CX1X3,CX2X3,VX3),3)
+VarX
